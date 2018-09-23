@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass":"node-sass sass/main.scss css/style.css"
   },
   "author": "aarus",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3"
   }
 }
