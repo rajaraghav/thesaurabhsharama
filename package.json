@@ -7,7 +7,7 @@
 		"start": "node index.js",
 		"dev": "concurrently \"npm run server\" \"npm run compile:sass\"",
 		"server": "nodemon index.js",
-		"compile:sass": "node-sass sass/main.scss public/style.css -wo"
+		"compile:sass": "node-sass sass/main.scss public/stylesheets/style.css -wo"
 	},
 	"author": "aarus",
 	"license": "ISC",
