@@ -12,8 +12,11 @@
 	"author": "aarus",
 	"license": "ISC",
 	"dependencies": {
+		"compression": "^1.7.3",
 		"concurrently": "^4.0.1",
-		"express": "^4.16.3"
+		"express": "^4.16.3",
+		"express-minify": "^1.0.0",
+		"hbs": "^4.0.1"
 	},
 	"devDependencies": {
 		"node-sass": "^4.9.3"
