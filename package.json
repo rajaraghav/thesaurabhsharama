@@ -1,15 +1,21 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "the saurabh sharma",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "aarus",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3"
-  }
+	"name": "server",
+	"version": "1.0.0",
+	"description": "the saurabh sharma",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "concurrently \"npm run server\" \"npm run compile:sass\"",
+		"server": "nodemon index.js",
+		"compile:sass": "node-sass sass/main.scss public/style.css -wo"
+	},
+	"author": "aarus",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^4.0.1",
+		"express": "^4.16.3"
+	},
+	"devDependencies": {
+		"node-sass": "^4.9.3"
+	}
 }
