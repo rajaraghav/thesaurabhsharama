@@ -7,13 +7,16 @@
 		"start": "node index.js",
 		"dev": "concurrently \"npm run server\" \"npm run compile:sass\"",
 		"server": "nodemon index.js",
-		"compile:sass": "node-sass sass/main.scss public/style.css -wo"
+		"compile:sass": "node-sass sass/main.scss public/stylesheets/style.css -wo"
 	},
 	"author": "aarus",
 	"license": "ISC",
 	"dependencies": {
+		"compression": "^1.7.3",
 		"concurrently": "^4.0.1",
-		"express": "^4.16.3"
+		"express": "^4.16.3",
+		"express-minify": "^1.0.0",
+		"hbs": "^4.0.1"
 	},
 	"devDependencies": {
 		"node-sass": "^4.9.3"
