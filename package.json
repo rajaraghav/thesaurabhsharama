@@ -16,7 +16,8 @@
 		"concurrently": "^4.0.1",
 		"express": "^4.16.3",
 		"express-minify": "^1.0.0",
-		"hbs": "^4.0.1"
+		"hbs": "^4.0.1",
+		"nodemon": "^1.18.4"
 	},
 	"devDependencies": {
 		"node-sass": "^4.9.3"
