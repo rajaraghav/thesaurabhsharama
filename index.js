@@ -17,10 +17,10 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
 //compression
-
-app.use(compression());
-app.use(minify());
-
+if (process.env.NODE_ENV === "production") {
+	app.use(compression());
+	app.use(minify());
+}
 //serve html and css and js
 
 app.use(express.static(path.join(__dirname, "public"), { maxAge: 2592000000 }));
