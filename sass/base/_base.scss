@@ -6,9 +6,9 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
-  //this defines what 1rem is 10px
-  font-size: 62.5%;
+	box-sizing: border-box;
+	//this defines what 1rem is 10px
+	font-size: 62.5%;
 }
 
 /**
@@ -20,10 +20,8 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
-body{
-  padding-left: 5rem;
-  padding-right: 5rem;
+body {
 }

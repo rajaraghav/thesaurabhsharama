@@ -1,0 +1,52 @@
+.hero {
+	position: relative;
+	overflow: hidden;
+}
+.hero__container {
+	padding: 0 5rem;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: rgb(243, 243, 243);
+	height: 100vh;
+}
+.hero__content__container {
+	display: flex;
+	justify-content: space-between;
+}
+.hero__filler {
+	width: 23rem;
+}
+.hero__intro {
+	&__container {
+		align-self: center;
+	}
+	&--heading {
+		text-align: left;
+	}
+	&--subHeading {
+		text-align: left;
+	}
+	&--image {
+		z-index: 3;
+	}
+}
+.hero__stripe {
+	position: absolute;
+	height: 100%;
+	width: 120%;
+
+	&--orange {
+		top: 90%;
+		left: -5%;
+		z-index: 1;
+		background-color: $color--primary;
+		transform: rotate(-10deg);
+	}
+	&--black {
+		top: 95%;
+		z-index: 2;
+		left: -6%;
+		transform: rotate(-5deg);
+		background-color: black;
+	}
+}
