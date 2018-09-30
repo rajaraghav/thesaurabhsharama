@@ -17,14 +17,19 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
 //compression
+console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === "production") {
+	console.log("process.env.NODE_ENV");
 	app.use(compression());
 	app.use(minify());
+	app.use(
+		express.static(path.join(__dirname, "public"), { maxAge: 2592000000 })
+	);
 }
 //serve html and css and js
-
-app.use(express.static(path.join(__dirname, "public"), { maxAge: 2592000000 }));
-
+else {
+	app.use(express.static(path.join(__dirname, "public")));
+}
 // routing
 
 app.use("/", index);
