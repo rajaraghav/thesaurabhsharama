@@ -483,10 +483,51 @@ body {
 
 .hero__content__container {
   display: flex;
+  margin-right: 15rem;
   justify-content: space-between; }
 
-.hero__filler {
-  width: 23rem; }
+.hero__button {
+  margin-top: 2rem; }
+  .hero__button--button {
+    width: 7rem;
+    border-radius: 50%;
+    height: 7rem;
+    outline: none;
+    box-shadow: 0.1rem 0.1rem 0.5rem black;
+    border: 0.5rem solid #f46b46;
+    background-color: white;
+    text-align: center; }
+    .hero__button--button--arrow {
+      margin: auto;
+      position: relative;
+      z-index: 3;
+      height: 0rem;
+      width: 0.55rem;
+      background-color: black;
+      border: none;
+      outline: none; }
+      .hero__button--button--arrow1 {
+        margin-bottom: 1rem; }
+      .hero__button--button--arrow::before {
+        content: "";
+        position: absolute;
+        width: 0.3rem;
+        top: 50%;
+        transform: rotate(50deg);
+        left: 100%;
+        height: 1.5rem;
+        background-color: black; }
+      .hero__button--button--arrow::after {
+        content: "";
+        position: absolute;
+        width: 0.3rem;
+        top: 50%;
+        transform: rotate(-50deg);
+        right: 100%;
+        height: 1.5rem;
+        background-color: black; }
+  .hero__button__container {
+    align-self: center; }
 
 .hero__intro__container {
   align-self: center; }
