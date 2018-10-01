@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node index.js",
 		"dev": "concurrently \"npm run server\" \"npm run compile:sass\"",
-		"server": "nodemon index.js",
+		"server": "nodemon index.js -e js,hbs,css",
 		"compile:sass": "node-sass sass/main.scss public/stylesheets/style.css -wo"
 	},
 	"author": "aarus",
@@ -20,6 +20,7 @@
 		"nodemon": "^1.18.4"
 	},
 	"devDependencies": {
-		"node-sass": "^4.9.3"
+		"node-sass": "^4.9.3",
+		"reload": "^2.3.1"
 	}
 }
