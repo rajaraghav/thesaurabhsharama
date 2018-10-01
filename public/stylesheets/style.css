@@ -1,3 +1,9 @@
+/*
+0-600px mobile
+600-900px tab
+900-1200px desktop
+1800px+ large desktop
+*/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -447,6 +453,9 @@ body {
   position: absolute;
   top: 2rem;
   z-index: 10; }
+  @media (max-width: 37.5em) {
+    .navigation {
+      display: none; } }
   .navigation > ul {
     list-style-type: none;
     margin: 0rem auto;
@@ -469,6 +478,33 @@ body {
         font-size: 2rem; }
   .navigation__logo {
     padding: 0px !important; }
+    @media (max-width: 37.5em) {
+      .navigation__logo {
+        display: block;
+        visibility: visible; } }
+
+.navigation__mob {
+  display: none;
+  width: 100%;
+  padding: 0rem 2rem;
+  height: 10rem;
+  margin: 0;
+  position: absolute;
+  top: 2rem;
+  z-index: 10; }
+  @media (max-width: 37.5em) {
+    .navigation__mob {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; } }
+  .navigation__mob__logo {
+    padding: 0px !important; }
+  .navigation__mob__menu {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0.01rem 0.01rem 0.2rem black; }
 
 .hero {
   position: relative;
@@ -480,11 +516,17 @@ body {
   flex-direction: column-reverse;
   background-color: #f3f3f3;
   height: 100vh; }
+  @media (max-width: 37.5em) {
+    .hero__container {
+      padding: 0 2rem; } }
 
 .hero__content__container {
   display: flex;
   margin-right: 15rem;
   justify-content: space-between; }
+  @media (max-width: 37.5em) {
+    .hero__content__container {
+      margin-right: 0rem; } }
 
 .hero__button {
   margin-top: 2rem; }
@@ -528,9 +570,18 @@ body {
         background-color: black; }
   .hero__button__container {
     align-self: center; }
+    @media (max-width: 37.5em) {
+      .hero__button__container {
+        display: none; } }
 
 .hero__intro__container {
   align-self: center; }
+  @media (max-width: 37.5em) {
+    .hero__intro__container {
+      align-self: flex-end;
+      position: relative;
+      z-index: 5;
+      margin-bottom: 5rem; } }
 
 .hero__intro--heading {
   text-align: left; }
@@ -540,23 +591,40 @@ body {
 
 .hero__intro--image {
   z-index: 3; }
+  @media (max-width: 37.5em) {
+    .hero__intro--image {
+      height: 30rem; } }
 
 .hero__stripe {
   position: absolute;
   height: 100%;
-  width: 120%; }
+  width: 123%; }
   .hero__stripe--orange {
     top: 90%;
     left: -5%;
     z-index: 1;
     background-color: #f46b46;
     transform: rotate(-10deg); }
+    @media (max-width: 37.5em) {
+      .hero__stripe--orange {
+        top: 90%;
+        left: 15%;
+        z-index: 1;
+        background-color: #f46b46;
+        transform: rotate(-15deg); } }
   .hero__stripe--black {
     top: 95%;
     z-index: 2;
     left: -6%;
     transform: rotate(-5deg);
     background-color: black; }
+    @media (max-width: 37.5em) {
+      .hero__stripe--black {
+        top: 95%;
+        z-index: 2;
+        left: -3%;
+        transform: rotate(-10deg);
+        background-color: black; } }
 
 .row {
   max-width: 114rem;
