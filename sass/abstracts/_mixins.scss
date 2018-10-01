@@ -1,7 +1,52 @@
 @mixin clearfix {
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/*
+0-600px mobile
+600-900px tab
+900-1200px desktop
+1800px+ large desktop
+*/
+
+@mixin respond($breakp) {
+	@if $breakp == phone {
+		@media (max-width: 37.5em) {
+			@content;
+		}
+	}
+	@if $breakp == phone-lg {
+		@media (min-width: 28.125em) and (max-width: 37.5em) {
+			@content;
+		}
+	}
+	@if $breakp==tab {
+		@media (max-width: 56.25em) {
+			@content;
+		}
+	}
+	@if $breakp==tab-lg {
+		@media (min-width: 40.625em) and (max-width: 56.25em) {
+			@content;
+		}
+	}
+	@if $breakp==ipad-pro {
+		@media (max-width: 75em) and (orientation: portrait) {
+			@content;
+		}
+	}
+	@if $breakp==desk {
+		@media (max-width: 75em) {
+			@content;
+		}
+	}
+	@if $breakp==lg {
+		@media (min-width: 93.75em) {
+			@content;
+		}
+	}
 }

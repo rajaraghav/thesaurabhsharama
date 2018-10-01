@@ -2,6 +2,7 @@ const express = require("express");
 var minify = require("express-minify");
 var compression = require("compression");
 var path = require("path");
+var reload = require("reload");
 
 //routes import
 
@@ -17,14 +18,19 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 
 //compression
+
 if (process.env.NODE_ENV === "production") {
 	app.use(compression());
 	app.use(minify());
+	app.use(
+		express.static(path.join(__dirname, "public"), { maxAge: 2592000000 })
+	);
 }
 //serve html and css and js
-
-app.use(express.static(path.join(__dirname, "public"), { maxAge: 2592000000 }));
-
+else {
+	reload(app);
+	app.use(express.static(path.join(__dirname, "public")));
+}
 // routing
 
 app.use("/", index);

@@ -1,4 +1,7 @@
 .navigation {
+	@include respond(phone) {
+		display: none;
+	}
 	width: 100%;
 	padding: 0rem 5rem;
 	height: 10rem;
@@ -31,8 +34,39 @@
 		}
 	}
 	&__logo {
+		@include respond(phone) {
+			display: block;
+			visibility: visible;
+		}
 		padding: 0px !important;
 		&--img {
 		}
+	}
+}
+.navigation__mob {
+	display: none;
+	width: 100%;
+	padding: 0rem 2rem;
+	height: 10rem;
+	margin: 0;
+	position: absolute;
+	top: 2rem;
+	z-index: 10;
+	@include respond(phone) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__logo {
+		padding: 0px !important;
+		&--img {
+		}
+	}
+	&__menu {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		background-color: white;
+		box-shadow: 0.01rem 0.01rem 0.2rem black;
 	}
 }

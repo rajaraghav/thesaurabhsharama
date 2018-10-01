@@ -8,11 +8,17 @@
 	flex-direction: column-reverse;
 	background-color: rgb(243, 243, 243);
 	height: 100vh;
+	@include respond(phone) {
+		padding: 0 2rem;
+	}
 }
 .hero__content__container {
 	display: flex;
 	margin-right: 15rem;
 	justify-content: space-between;
+	@include respond(phone) {
+		margin-right: 0rem;
+	}
 }
 .hero__button {
 	margin-top: 2rem;
@@ -20,7 +26,6 @@
 		width: 7rem;
 		border-radius: 50%;
 		height: 7rem;
-
 		outline: none;
 		box-shadow: 0.1rem 0.1rem 0.5rem black;
 		border: 0.5rem solid $color--primary;
@@ -67,11 +72,20 @@
 
 	&__container {
 		align-self: center;
+		@include respond(phone) {
+			display: none;
+		}
 	}
 }
 .hero__intro {
 	&__container {
 		align-self: center;
+		@include respond(phone) {
+			align-self: flex-end;
+			position: relative;
+			z-index: 5;
+			margin-bottom: 5rem;
+		}
 	}
 	&--heading {
 		text-align: left;
@@ -81,12 +95,15 @@
 	}
 	&--image {
 		z-index: 3;
+		@include respond(phone) {
+			height: 30rem;
+		}
 	}
 }
 .hero__stripe {
 	position: absolute;
 	height: 100%;
-	width: 120%;
+	width: 123%;
 
 	&--orange {
 		top: 90%;
@@ -94,6 +111,13 @@
 		z-index: 1;
 		background-color: $color--primary;
 		transform: rotate(-10deg);
+		@include respond(phone) {
+			top: 90%;
+			left: 15%;
+			z-index: 1;
+			background-color: #f46b46;
+			transform: rotate(-15deg);
+		}
 	}
 	&--black {
 		top: 95%;
@@ -101,5 +125,12 @@
 		left: -6%;
 		transform: rotate(-5deg);
 		background-color: black;
+		@include respond(phone) {
+			top: 95%;
+			z-index: 2;
+			left: -3%;
+			transform: rotate(-10deg);
+			background-color: black;
+		}
 	}
 }
