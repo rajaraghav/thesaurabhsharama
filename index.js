@@ -2,8 +2,6 @@ const express = require("express");
 var minify = require("express-minify");
 var compression = require("compression");
 var path = require("path");
-var reload = require("reload");
-
 //routes import
 
 var index = require("./routes/index");
@@ -28,6 +26,7 @@ if (process.env.NODE_ENV === "production") {
 }
 //serve html and css and js
 else {
+	var reload = require("reload");
 	reload(app);
 	app.use(express.static(path.join(__dirname, "public")));
 }

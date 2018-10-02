@@ -100,37 +100,3 @@
 		}
 	}
 }
-.hero__stripe {
-	position: absolute;
-	height: 100%;
-	width: 123%;
-
-	&--orange {
-		top: 90%;
-		left: -5%;
-		z-index: 1;
-		background-color: $color--primary;
-		transform: rotate(-10deg);
-		@include respond(phone) {
-			top: 90%;
-			left: 15%;
-			z-index: 1;
-			background-color: #f46b46;
-			transform: rotate(-15deg);
-		}
-	}
-	&--black {
-		top: 95%;
-		z-index: 2;
-		left: -6%;
-		transform: rotate(-5deg);
-		background-color: black;
-		@include respond(phone) {
-			top: 95%;
-			z-index: 2;
-			left: -3%;
-			transform: rotate(-10deg);
-			background-color: black;
-		}
-	}
-}
