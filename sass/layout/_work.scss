@@ -1,0 +1,106 @@
+.work {
+	background-color: $color__work1--background;
+	position: relative;
+	overflow: hidden;
+}
+.work__container {
+	padding: 0;
+	display: flex;
+	height: 100vh;
+	@include respond(phone) {
+		padding: 0 2rem;
+	}
+}
+.work__content__container {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0 0 15rem;
+	width: 100%;
+	@include respond(phone) {
+		margin-right: 0rem;
+	}
+}
+.work__intro {
+	&__container {
+		background-color: $color--primary;
+		display: flex;
+		max-width: 40rem;
+		padding: 20rem 0;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		@include respond(phone) {
+			position: relative;
+			z-index: 5;
+			margin-bottom: 5rem;
+		}
+	}
+	&--heading {
+		color: white;
+		text-align: center;
+		letter-spacing: 0.3rem;
+		margin-bottom: 5rem;
+	}
+	&--subHeading {
+		color: white;
+		text-align: center;
+	}
+	&--button {
+		width: 60%;
+		text-align: center;
+		border: 0.2rem black solid;
+		color: white;
+		background-color: transparent;
+		font-size: 1.8rem;
+		line-height: 0.5rem;
+		text-transform: capitalize;
+		height: 5rem;
+		padding: 2rem 2rem;
+		transition: 0.3s;
+		&:hover {
+			background-color: black;
+			color: white;
+		}
+	}
+	&--image {
+		z-index: 3;
+		align-self: flex-end;
+		@include respond(phone) {
+			height: 30rem;
+		}
+	}
+}
+.work__stripe {
+	position: absolute;
+	height: 100%;
+	width: 123%;
+
+	&--orange {
+		top: 90%;
+		left: -5%;
+		z-index: 1;
+		background-color: $color--primary;
+		transform: rotate(-10deg);
+		@include respond(phone) {
+			top: 90%;
+			left: 15%;
+			z-index: 1;
+			background-color: #f46b46;
+			transform: rotate(-15deg);
+		}
+	}
+	&--black {
+		top: 95%;
+		z-index: 2;
+		left: -6%;
+		transform: rotate(-5deg);
+		background-color: black;
+		@include respond(phone) {
+			top: 95%;
+			z-index: 2;
+			left: -3%;
+			transform: rotate(-10deg);
+			background-color: black;
+		}
+	}
+}
