@@ -4,6 +4,30 @@
 900-1200px desktop
 1800px+ large desktop
 */
+@keyframes animation__leftVisible {
+  0% {
+    right: -10rem;
+    visibility: hidden;
+    position: fixed;
+    opacity: 0%; }
+  100% {
+    right: 0;
+    visibility: visible;
+    position: fixed;
+    opacity: 100%; } }
+
+@keyframes animation__rightInvisible {
+  0% {
+    right: 0rem;
+    visibility: visible;
+    opacity: 100%;
+    position: fixed; }
+  100% {
+    right: -10rem;
+    visibility: hidden;
+    position: fixed;
+    opacity: 0%; } }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -544,6 +568,7 @@ p {
 .hero__button {
   margin-top: 2rem; }
   .hero__button--button {
+    cursor: pointer;
     width: 7rem;
     border-radius: 50%;
     height: 7rem;
@@ -609,7 +634,7 @@ p {
       height: 30rem; } }
 
 .work {
-  background-color: #F28675;
+  background-color: #fff;
   position: relative;
   overflow: hidden; }
 
@@ -708,6 +733,36 @@ p {
         transform: rotate(-10deg);
         background-color: black; } }
 
+.work2 {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  height: 100vh; }
+  .work2__video__container {
+    display: flex;
+    justify-content: space-around; }
+  .work2__section2 {
+    padding: 5rem 0;
+    text-align: center;
+    height: 100%; }
+  .work2__section1 {
+    padding: 0 10rem;
+    height: 10%;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 10%); }
+  .work2__section4 {
+    padding: 0 10rem;
+    height: 10%;
+    background-color: #f46b46;
+    transform: rotate(180deg);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 10%); }
+  .work2__section3 {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    height: 100%; }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -755,6 +810,55 @@ p {
         left: -3%;
         transform: rotate(-10deg);
         background-color: black; } }
+
+.profileButton {
+  position: fixed;
+  right: 0;
+  z-index: 115;
+  top: 0;
+  padding: 5rem 7rem;
+  visibility: hidden; }
+  .profileButton--button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    background: linear-gradient(#ff8a52, #f46b45);
+    box-shadow: 0.01rem 0.01rem 0.2rem black;
+    border: 0.3rem white solid; }
+  .profileButton__info__Container {
+    min-width: 3rem;
+    text-align: center; }
+  .profileButton__info--text {
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+    line-height: 0.1px; }
+  .profileButton__info--border {
+    cursor: pointer; }
+    .profileButton__info--borderActive {
+      width: 1.5rem;
+      border-top: 0.5rem solid black;
+      display: inline-block; }
+    .profileButton__info--borderInactive {
+      width: 1rem;
+      border-top: 0.4rem solid #777;
+      display: inline-block;
+      margin-left: 0.5rem; }
+  .profileButton__info--active {
+    color: black;
+    font-size: 2rem; }
+  .profileButton__info--inactive {
+    color: #777;
+    font-size: 1.6rem; }
+
+.animated__leftVisible {
+  animation: animation__leftVisible 0.5s;
+  animation-fill-mode: forwards; }
+
+.animated__rightInvisible {
+  visibility: hidden; }
 
 .home {
   height: 200px; }

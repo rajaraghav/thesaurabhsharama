@@ -1,5 +1,5 @@
 <!--Hero begins-->
-<div class="hero">
+<div id="hero" class="hero">
     <div class="hero__container">
         <div class="hero__content__container">
 
@@ -8,10 +8,10 @@
                 <p class="hero__intro--subHeading">National Head (Sales) at Cinepolis India</p>
             </div>
 
-            <img class="hero__intro--image" src="/images/herocut.png" />
+            <img id="heroImg" class="hero__intro--image" src="/images/herocut.png" />
 
             <div class="hero__button__container">
-                <button class="hero__button--button">
+                <button onclick="moveTo('work')" class="hero__button--button">
                     <div class="hero__button--button--arrow hero__button--button--arrow1"></div>
                     <div class="hero__button--button--arrow"></div>
                 </button>
@@ -29,19 +29,45 @@
 </div>
 <!--Hero ends-->
 <!--Work begins-->
-<div class="work">
+<div id="work" class="work">
+    <div class="util__workHiddenHelper"></div>
+    <div id="profileButton" class="profileButton">
+        <div class="profileButton--button">
+        </div>
+        <div class="profileButton__info__container">
+            <span onclick="moveTo('work')" id="spoke__workMain" class="profileButton__info--border profileButton__info--borderActive"></span>
+            <p onclick="moveTo('work')" id="spoke__workMainTxt" class="profileButton__info--text profileButton__info--active">
+                Work</p><br />
+            <span onclick="moveTo('work')" id="spoke__work1" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+            <span onclick="moveTo('work2')" id="spoke__work2" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+
+            <span onclick="moveTo('health')" id="spoke__healthMain" class="profileButton__info--border profileButton__info--borderInactive"></span>
+            <p onclick="moveTo('health')" id="spoke__healthMainTxt" class="profileButton__info--text profileButton__info--inactive">
+                Health
+            </p><br />
+            <span onclick="moveTo('health')" id="spoke__health1" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+            <span onclick="moveTo('health2')" id="spoke__health2" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+            <span onclick="moveTo('rel')" id="spoke__relMain" class="profileButton__info--border profileButton__info--borderInactive"></span>
+            <p onclick="moveTo('rel')" id="spoke__relMainTxt" class="profileButton__info--text profileButton__info--inactive">
+                Relationships
+            </p><br />
+            <span onclick="moveTo('rel')" id="spoke__rel1" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+            <span onclick="moveTo('rel2')" id="spoke__rel2" class="profileButton__info--border profileButton__info--borderInactive"></span><br />
+        </div>
+    </div>
     <div class="work__container">
         <div class="work__content__container">
 
             <div class="work__intro__container">
                 <h1 class="work__intro--heading heading-primary">Purpose and passion</h1>
-                <p class="work__intro--subHeading">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quod
+                <p id="work1InfoSub" class="work__intro--subHeading">Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil quod
                     omnis corporis saepe quos explicabo consequuntur ullam nam a totam dolorum dolor tempora excepturi
                     molestias accusamus culpa adipisci, eveniet rerum.</p>
                 <button class="work__intro--button">Work with saurabh</button>
             </div>
 
-            <img class="work__intro--image" src="/images/dup.png" />
+            <img id="heroImg" class="work__intro--image" src="/images/dup.png" />
 
 
         </div>
@@ -49,7 +75,50 @@
     </div>
 
 </div>
+<!--Work 2 begins-->
+<div id="work2" class="work2">
+    <div class="work2__section1">
+
+    </div>
+    <div class="work2__section2">
+        <h1 class="work2__intro--heading">Work speaks for itself</h1>
+        <div class="work2__video__container">
+            <iframe src="https://www.youtube.com/embed/q1NqQbGtfNE?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/xoqqzVQ5Wbc?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/QqaagqcgWw8?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="work2__section3">
+        <h1 class="work2__intro--heading">Work speaks for itself</h1>
+        <div class="work2__video__container">
+            <iframe src="https://www.youtube.com/embed/dgzRYnQM4_c?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/aqdTswJXh8s?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/qMoay-Nylhs?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="work2__section4">
+
+    </div>
+</div>
+<!--Work 2 ends-->
 <!--Work ends-->
+
+<!--Health begins-->
+<div id="health" class="work">
+
+</div>
+<!--Health 2 begins-->
+<div id="health2" class="work2"></div>
+<!--Health 2 ends-->
+<!--Health ends-->
+
 <div class="footer">
     &copy; {{this.date}} by Aarus.
 </div>

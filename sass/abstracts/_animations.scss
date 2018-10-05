@@ -1,0 +1,28 @@
+@keyframes animation__leftVisible {
+	0% {
+		right: -10rem;
+		visibility: hidden;
+		position: fixed;
+		opacity: 0%;
+	}
+	100% {
+		right: 0;
+		visibility: visible;
+		position: fixed;
+		opacity: 100%;
+	}
+}
+@keyframes animation__rightInvisible {
+	0% {
+		right: 0rem;
+		visibility: visible;
+		opacity: 100%;
+		position: fixed;
+	}
+	100% {
+		right: -10rem;
+		visibility: hidden;
+		position: fixed;
+		opacity: 0%;
+	}
+}
