@@ -2,6 +2,7 @@ const express = require("express");
 var minify = require("express-minify");
 var compression = require("compression");
 var path = require("path");
+
 //routes import
 
 var index = require("./routes/index");
