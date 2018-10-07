@@ -96,6 +96,8 @@
 	}
 	&--image {
 		z-index: 3;
+		width: 45%;
+		height: 50rem;
 		@include respond(phone) {
 			height: 30rem;
 		}

@@ -26,3 +26,45 @@
 		opacity: 0%;
 	}
 }
+
+@keyframes openFull {
+	0% {
+		width: 1%;
+		left: 50%;
+		visibility: visible;
+	}
+	100% {
+		width: 300%;
+		left: -100%;
+		visibility: visible;
+	}
+}
+@keyframes closeFull {
+	0% {
+		width: 300%;
+		left: -100%;
+		visibility: visible;
+	}
+	100% {
+		width: 0%;
+		left: 50%;
+		visibility: hidden;
+	}
+}
+.animated__openFull1 {
+	animation: openFull 2s 1s ease-out;
+	animation-fill-mode: forwards;
+}
+.animated__openFull2 {
+	animation: openFull 3s 1.5s ease-out;
+	animation-fill-mode: forwards;
+}
+
+.animated__closeFull1 {
+	animation: closeFull 2s 0.2s ease-out;
+	animation-fill-mode: forwards;
+}
+.animated__closeFull2 {
+	animation: closeFull 1s ease-out;
+	animation-fill-mode: forwards;
+}

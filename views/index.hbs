@@ -1,3 +1,16 @@
+<div onclick='profileClick()' id="profileMenuButton" on class="profileButton__menu--button util__visibilityHidden">
+</div>
+<div id="profileButton__menu--back2" class="profileButton__menu--back2">
+    <div class="profileButton__menu__container">
+        <ul class="profileButton__menu__menuContainer">
+            <li class="profileButton__menu--intro">øNavigation</li>
+            <li class="profileButton__menu--item" onclick="moveNavTo('work')">Work</li>
+            <li class="profileButton__menu--item" onclick="moveNavTo('health')">Health</li>
+            <li class="profileButton__menu--item" onclick="moveNavTo('rel')">Relationships</li>
+        </ul>
+    </div>
+</div>
+<div id="profileButton__menu--back1" class="profileButton__menu--back1"></div>
 <!--Hero begins-->
 <div id="hero" class="hero">
     <div class="hero__container">
@@ -8,7 +21,7 @@
                 <p class="hero__intro--subHeading">National Head (Sales) at Cinepolis India</p>
             </div>
 
-            <img id="heroImg" class="hero__intro--image" src="/images/herocut.png" />
+            <img id="heroImg" class="hero__intro--image" src="/images/sherocut.png" />
 
             <div class="hero__button__container">
                 <button onclick="moveTo('work')" class="hero__button--button">
@@ -30,9 +43,11 @@
 <!--Hero ends-->
 <!--Work begins-->
 <div id="work" class="work">
-    <div class="util__workHiddenHelper"></div>
     <div id="profileButton" class="profileButton">
-        <div class="profileButton--button">
+        <div onclick='profileClick()' class="profileButton--button">
+            <div class="profileButton--button--cross">
+
+            </div>
         </div>
         <div class="profileButton__info__container">
             <span onclick="moveTo('work')" id="spoke__workMain" class="profileButton__info--border profileButton__info--borderActive"></span>
@@ -83,11 +98,11 @@
     <div class="work2__section2">
         <h1 class="work2__intro--heading">Work speaks for itself</h1>
         <div class="work2__video__container">
-            <iframe src="https://www.youtube.com/embed/q1NqQbGtfNE?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+            <iframe class="work2--video" src="https://www.youtube.com/embed/q1NqQbGtfNE?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/xoqqzVQ5Wbc?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+            <iframe class="work2--video" src="https://www.youtube.com/embed/xoqqzVQ5Wbc?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/QqaagqcgWw8?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
+            <iframe class="work2--video" src="https://www.youtube.com/embed/QqaagqcgWw8?modestbranding=1;controls=0;showinfo=0;rel=0;fs=1"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
     </div>
@@ -111,14 +126,104 @@
 <!--Work ends-->
 
 <!--Health begins-->
-<div id="health" class="work">
+<div id="health" class="health">
+    <div class="health__container">
+        <div class="health__content__container">
 
+            <div class="health__intro__container">
+                <h1 class="health__intro--heading heading-primary">Healthy body, Healthy mind</h1>
+                <p id="health1InfoSub" class="health__intro--subHeading">Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil quod
+                    omnis corporis saepe quos explicabo consequuntur ullam nam a totam dolorum dolor tempora excepturi
+                    molestias accusamus culpa adipisci, eveniet rerum.</p>
+            </div>
+
+            <img id="heroImg" class="health__intro--image" src="/images/run.png" />
+
+
+        </div>
+
+    </div>
 </div>
 <!--Health 2 begins-->
-<div id="health2" class="work2"></div>
+<div id="health2" class="health2">
+    <div id="health2" class="health2__content__container">
+        <div id="health2" class="health2__content1">
+            <div class="health2__content1__info">
+                <div class="health2__content1__info--head">Lorem ipsum dolor sit</div>
+                <div class="health2__content1__info--sub">amed opum ispum dolor amed opum ispum doloramed opum ispum
+                    doloramed opum ispum doloramed opum ispum doloramed opum ispum dolor</div>
+            </div>
+        </div>
+        <div id="health2" class="health2__content2">
+            <div class="health2__content2__info1">
+                <div class="health2__content2__info--head">Lorem ipsum dolor sit</div>
+                <div class="health2__content2__info--sub">amed opum ispum dolor</div>
+            </div>
+            <div class="health2__content2__info2">
+                <div class="health2__content2__info--head">Lorem ipsum dolor sit</div>
+                <div class="health2__content2__info--sub">amed opum ispum dolor</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
 <!--Health 2 ends-->
 <!--Health ends-->
 
+<!--Realtion begins-->
+<div id="rel" class="relation">
+    <div class="relation__container">
+        <div class="relation__content__container">
+
+            <div class="relation__intro__container">
+                <h1 class="relation__intro--heading heading-primary">Relationships that matter</h1>
+                <p id="relation1InfoSub" class="relation__intro--subHeading">Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Nihil quod
+                    omnis corporis saepe quos explicabo consequuntur ullam nam a totam dolorum dolor tempora excepturi
+                    molestias accusamus culpa adipisci, eveniet rerum.</p>
+            </div>
+
+            <!--<img id="heroImg" class="health__intro- -image" src="/images/father1.jpg" />-->
+
+
+        </div>
+
+    </div>
+</div>
+<!--Health 2 begins-->
+<div id="rel2" class="relation2">
+    <div class="relation2__intro">
+        Crazy, Happy Family
+    </div>
+    <div class="relation2__content__container">
+        <div class="relation2__content__row">
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+        </div>
+        <div class="relation2__content__row">
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+            <div class="relation2__content--item">
+                <img class="relation2__content--item--img" src="/images/fam.jpeg" />
+            </div>
+        </div>
+    </div>
+</div>
+<!--Health 2 ends-->
+<!--Health ends-->
 <div class="footer">
     &copy; {{this.date}} by Aarus.
 </div>

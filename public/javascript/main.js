@@ -15,7 +15,12 @@ let deActivateSpoke = function(spk, mainTxt) {
 		mainTxt.classList.add("profileButton__info--inactive");
 	}
 };
-
+profileButton__menu__back2 = document.getElementById(
+	"profileButton__menu--back2"
+);
+profileButton__menu__back1 = document.getElementById(
+	"profileButton__menu--back1"
+);
 spokeworkMain = document.getElementById("spoke__workMain");
 spokeworkMainTxt = document.getElementById("spoke__workMainTxt");
 spokework1 = document.getElementById("spoke__work1");
@@ -152,12 +157,61 @@ $(window).scroll(function() {
 });
 
 let moveTo = function(el) {
-	console.log("here", el);
-	console.log("click");
 	$([document.documentElement, document.body]).animate(
 		{
 			scrollTop: $("#" + el).offset().top
 		},
 		1000
 	);
+};
+let moveNavTo = function(el) {
+	profileButton__menu__back1.classList.add("animated__closeFull1");
+
+	profileButton__menu__back2.classList.add("animated__closeFull2");
+	setTimeout(() => {
+		document
+			.getElementById("profileMenuButton")
+			.classList.remove("util__visibilityVisible");
+		document
+			.getElementById("profileMenuButton")
+			.classList.add("util__visibilityHidden");
+		profileButton__menu__back1.classList.remove("animated__openFull1");
+		profileButton__menu__back2.classList.remove("animated__openFull2");
+		moveTo(el);
+		document.body.classList.remove("util__overflowHidden");
+	}, 2000);
+};
+let profileOpened = false;
+let profileClick = function() {
+	if (!profileOpened) {
+		profileOpened = true;
+		moveTo("hero");
+		profileButton__menu__back1.classList.remove("animated__closeFull1");
+		profileButton__menu__back1.classList.add("animated__openFull1");
+		profileButton__menu__back2.classList.remove("animated__closeFull2");
+		profileButton__menu__back2.classList.add("animated__openFull2");
+		document.body.classList.add("util__overflowHidden");
+		setTimeout(() => {
+			document
+			.getElementById("profileMenuButton")
+			.classList.remove("util__visibilityHidden");
+		document
+			.getElementById("profileMenuButton")
+			.classList.add("util__visibilityVisible");	
+		}, 2000);
+		
+	} else {
+		profileOpened = false;
+		profileButton__menu__back1.classList.remove("animated__openFull1");
+		profileButton__menu__back1.classList.add("animated__closeFull1");
+		profileButton__menu__back2.classList.remove("animated__openFull2");
+		profileButton__menu__back2.classList.add("animated__closeFull2");
+		document.body.classList.remove("util__overflowHidden");
+		document
+			.getElementById("profileMenuButton")
+			.classList.remove("util__visibilityVisible");
+		document
+			.getElementById("profileMenuButton")
+			.classList.add("util__visibilityHidden");
+	}
 };
