@@ -85,7 +85,7 @@
 		}
 	}
 	&__menu--back1 {
-		position: absolute;
+		position: fixed;
 		top: -100%;
 		transform: rotate(-45deg);
 		height: 300%;
@@ -97,7 +97,7 @@
 		transition: all 1s;
 	}
 	&__menu--back2 {
-		position: absolute;
+		position: fixed;
 		top: -100%;
 		transform: rotate(-45deg);
 		height: 300%;
