@@ -9,7 +9,7 @@
 	height: 100vh;
 	@include respond(phone) {
 		padding: 0;
-		flex-direction: column;
+		justify-content: space-between;
 	}
 }
 .work__content__container {

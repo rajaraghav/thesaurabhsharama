@@ -13,6 +13,7 @@
 	@include respond(phone) {
 		padding: 0;
 		flex-direction: column;
+		justify-content: center;
 	}
 }
 .relation__content__container {
@@ -84,12 +85,24 @@
 
 .relation2 {
 	padding: 5rem 20rem;
-	height: 105vh;
+	height: 100vh;
+	@include respond(phone) {
+		padding: 2rem 0rem;
+		height: 100vh;
+		text-align: center;
+		display: flex;
+		display: column;
+		justify-content: center;
+	}
 	&__intro {
 		text-align: center;
 		font-size: 2.5rem;
+		z-index: 1;
 		font-weight: 500;
 		color: $color--relation;
+		@include respond(phone) {
+			width: 100%;
+		}
 	}
 	&__content {
 		&__container {
@@ -97,40 +110,63 @@
 			display: flex;
 			width: 100%;
 			position: absolute;
-
 			background-color: white;
 			max-width: fit-content;
 			flex-direction: column;
+			@include respond(phone) {
+				max-width: 100%;
+				text-align: center;
+				align-items: center;
+				padding: 10rem 0;
+			}
 			&::after {
 				content: "";
 				position: absolute;
-				width: 20rem;
-				height: 21rem;
+				width: 40%;
+				height: 21%;
 				top: -5rem;
 				left: -10rem;
 				z-index: -1;
 				border-top: 2rem $color--relation solid;
 				border-left: 2rem $color--relation solid;
+				@include respond(phone) {
+					top: 4rem;
+					left: 0rem;
+					z-index: 1;
+				}
 			}
 			&::before {
 				content: "";
 				position: absolute;
-				width: 20rem;
-				height: 21rem;
+				width: 40%;
+				height: 21%;
 				bottom: -5rem;
 				right: -10rem;
 				z-index: -1;
 				border-bottom: 2rem $color--relation solid;
 				border-right: 2rem $color--relation solid;
+				@include respond(phone) {
+					bottom: 3rem;
+					right: 0rem;
+					z-index: 1;
+				}
 			}
 		}
 		&__row {
 			display: flex;
 			flex-direction: row;
 			max-width: fit-content;
-
+			&:last-child {
+				@include respond(phone) {
+					display: none;
+				}
+			}
 			&:not(:last-child) {
 				margin-bottom: 15rem;
+				@include respond(phone) {
+					flex-direction: column;
+					margin-bottom: 0;
+				}
 			}
 		}
 		&--item {
@@ -144,6 +180,9 @@
 			align-items: center;
 			&:not(:last-child) {
 				margin-right: 15rem;
+				@include respond(phone) {
+					margin-right: 0;
+				}
 			}
 			&--img {
 				height: 11rem;

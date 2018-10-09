@@ -193,13 +193,12 @@ let profileClick = function() {
 		document.body.classList.add("util__overflowHidden");
 		setTimeout(() => {
 			document
-			.getElementById("profileMenuButton")
-			.classList.remove("util__visibilityHidden");
-		document
-			.getElementById("profileMenuButton")
-			.classList.add("util__visibilityVisible");	
+				.getElementById("profileMenuButton")
+				.classList.remove("util__visibilityHidden");
+			document
+				.getElementById("profileMenuButton")
+				.classList.add("util__visibilityVisible");
 		}, 2000);
-		
 	} else {
 		profileOpened = false;
 		profileButton__menu__back1.classList.remove("animated__openFull1");

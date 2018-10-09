@@ -1,33 +1,30 @@
 .stripe {
 	position: absolute;
-	height: 100%;
-	width: 123%;
-
+	width: 80%;
+	right: 0;
 	&--orange {
-		top: 90%;
-		left: -5%;
+		top: 80%;
+		height: 20%;
 		z-index: 1;
 		background-color: $color--primary;
-		transform: rotate(-10deg);
+		clip-path: polygon(0 100%, 100% 0, 100% 100%, 0 100%);
 		@include respond(phone) {
 			top: 90%;
-			left: 15%;
 			z-index: 1;
+			clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
 			background-color: #f46b46;
-			transform: rotate(-15deg);
 		}
 	}
 	&--black {
-		top: 95%;
+		top: 90%;
 		z-index: 2;
-		left: -6%;
-		transform: rotate(-5deg);
+		height: 20%;
+		clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
 		background-color: black;
 		@include respond(phone) {
 			top: 95%;
 			z-index: 2;
-			left: -3%;
-			transform: rotate(-10deg);
+			clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
 			background-color: black;
 		}
 	}

@@ -88,12 +88,23 @@
 		),
 		url("/images/health2back.jpg");
 	position: relative;
+	background-position: center;
+	background-size: cover;
 	height: 100vh;
+
 	&__content__container {
 		display: flex;
 		width: 100%;
 		position: absolute;
 		height: 100%;
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column-reverse;
+			width: 100%;
+			position: absolute;
+			justify-content: space-between;
+			height: 100%;
+		}
 	}
 	&__content1 {
 		display: flex;
@@ -103,6 +114,16 @@
 		width: 50%;
 		background-color: #fff;
 		clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+		@include respond(phone) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+			width: 100%;
+			padding: 2rem 0;
+			background-color: #fff;
+		}
 		&__info {
 			&--head {
 				text-align: center;
@@ -127,12 +148,26 @@
 		align-items: center;
 		width: 50%;
 		padding-right: 10rem;
+		@include respond(phone) {
+			display: flex;
+			width: 100%;
+			padding: 2rem 0;
+			padding-right: 0rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 70%;
+		}
 		&__info {
 			&1 {
 				margin-bottom: 8rem;
 			}
 			&2 {
 				margin-top: 8rem;
+				@include respond(phone) {
+					display: none;
+					margin-top: 0;
+				}
 			}
 			&--head {
 				text-align: center;
